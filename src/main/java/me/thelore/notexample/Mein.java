@@ -23,10 +23,8 @@ public class Mein extends JavaPlugin implements Listener {
 
     @EventHandler
     public void on(PlayerMoveEvent e) {
-        if(e.getFrom().getX() != e.getTo().getX() && e.getFrom().getY() != e.getTo().getY() && e.getFrom().getZ() != e.getTo().getZ()) {
-            getPl().getConfig().set("balance", getConfig().getInt("balance") + 1);
-            getPl().saveConfig();
-        }
+        getPl().getConfig().set("balance", getConfig().getInt("balance") + 1);
+        getPl().saveConfig();
     }
 
 }
